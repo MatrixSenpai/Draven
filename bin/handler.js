@@ -1,3 +1,5 @@
+const strings = require('../include/strings').strings;
+
 class MessageHandler {
     constructor(parse, logger) {
         this.logger = logger;
@@ -17,6 +19,7 @@ class MessageHandler {
             switch(command) {
                 case "host"   : this._host(message, split); break;
                 case "command": this._setCommandChar(message, split); break;
+                case "issue"  : message.reply(strings.replies.issue); break;
                 default: message.reply("hello bitch");
             }
         }
@@ -24,6 +27,15 @@ class MessageHandler {
 
     _host(message, split) {
         message.reply('Create a new tournament');
+
+        let type = split[1];
+        if(type === "inhouse") {
+
+        } else if(type === "global") {
+
+        } else {
+            message.reply('please specify a type of tournament (`global` or `inhouse`');
+        }
     }
 
     _setCommandChar(message, split) {
