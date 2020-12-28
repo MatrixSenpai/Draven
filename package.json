@@ -6,7 +6,7 @@
     "express": "^4.16.4",
     "fs": "0.0.1-security",
     "parse": "^2.3.2",
-    "parse-server": "^3.2.3",
+    "parse-server": "^4.5.0",
     "tracer": "^0.9.8"
   },
   "scripts": {
